@@ -1,0 +1,27 @@
+#include<reg51.h>
+
+#define Del 2000
+
+void delay(unsigned int x)
+{
+unsigned int i,j;
+
+for(i=0;i<x;i++)
+
+for(j=0;j<=100;j++);
+}
+void main(void)
+{
+unsigned char count[16]={0xc0,0d9,0x4,00,0x99,092,0x82,018,0x80,0x90,0x88,083,0c6,01,086,0x3e};
+unsigned int x;
+P1=0x00;
+while(1)
+{
+for(x=0;x<16;x++)
+{
+P1=count[x];
+
+delay(Del);
+}
+}
+}

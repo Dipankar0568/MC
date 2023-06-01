@@ -1,0 +1,19 @@
+#include<reg51.h>
+
+unsigned char d;
+
+void main(void)
+{
+while(1)
+{
+	
+for(d=0;d<255;d++)
+	{
+		P2=d;
+	}
+	for(d=255;d>0;d--)
+	{
+		P2=d;
+	}
+}
+}
